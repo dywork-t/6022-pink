@@ -175,22 +175,29 @@ body {
   }
 }
 .main-content {
-  &__wrap {
+  &__advantage-wrap {
 
   }
   &__headtitle {
     color: $text-color;
     background-color: #fff;
     text-align: center;
+    padding: 40px 0 40px 0;
+    background: url("../img/sprite-pattern-bg.png") no-repeat center bottom;
+    background-size: 100% auto;
   }
   &__title-head {
     font-size: 24px;
     font-weight: 300;
   }
   &__advantage-block {
-    padding: 80px 6%;
+    position: relative;
+    padding: 30px 6% 300px;
     text-align: center;
-    background: url("../img/pattern_bg.png") no-repeat;
+    background: #f1f1f1 url("../img/iphone-helloy.png") no-repeat center bottom;
+  }
+  &__advantage-content {
+    margin-bottom: 40px;
   }
   &__advantage-title {
     font-size: 18px;
@@ -199,22 +206,159 @@ body {
     margin-bottom: 10px;
   }
   &__advantage-text {
-    font-size: 14px;
+    font-size: $font-size;
     line-height: 24px;
     font-weight: 400;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
+.slider-reviews {
+  position: relative;
+  padding: 47px 0 70px;
+  background: url("../img/sprite-pattern-bg.png") center bottom no-repeat;
+  background-size: 100% auto;
 
+  &__slide {
+    text-align: center;
+    padding: 0 6%;
+  }
+  &__slide-text {
+    font-size: $font-size;
+    line-height: 30px;
+    color: $text-color;
+  }
+  &__pagination {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 140px;
+    height: 15px;
+    text-align: center;
+    margin-left: -70px;
+  }
+  &__pagination-item--active {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid $accent-color;
+    background: #fff;
+  }
+  &__pagination-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background: #bec2c7;
+  }
+}
+.tariff-block {
+  position: relative;
+  padding: 50px 0 100px;
+  background: #f1f1f1;
+
+  &__slider {
+
+  }
+  &__slide-head {
+    padding: 15px 0 10px;
+    text-align: center;
+    background: $accent-color;
+  }
+  &__slide-title {
+    margin: 0;
+    font-size: $font-size-h2;
+    text-transform: uppercase;
+    color: lighten($text-color--white, 10%);
+  }
+  &__slide-price {
+    margin: 9px 0;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: lighten($text-color--white, 10%);
+  }
+  &__slide-flag--hit {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 74px;
+    height: 73px;
+    background: url(../img/sprite-flag--hit.png);
+  }
+  &__slide-name-tariff {
+    position: relative;
+    padding: 21px 7%;
+    color: #000;
+    background: #fff;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  &__slide-name-title {
+    font-size: $font-size;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  &__slide-check-mark {
+    position: absolute;
+    top: 17px;
+    right: 22px;
+    width: 29px;
+    height: 22px;
+    background: url("../img/slide-check-mark.png") no-repeat;
+  }
+  &__slide-check-mark--cross {
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    width: 26px;
+    height: 26px;
+    background: url("../img/slide-check-mark--no.png") no-repeat;
+  }
+  &__table {
+    display: none;
+  }
+  &__slider-pagination {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    width: 140px;
+    height: 15px;
+    text-align: center;
+    margin-left: -70px;
+  }
+  &__slider-pagination-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid #f2f2f2;
+    background: #bec2c7;
+  }
+  &__slider-pagination-item--active {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 3px solid $accent-color;
+    background: #fff;
+  }
+}
 /* Стили адаптации*/
 
-@media(max-width: 320px) {
+/* @media(max-width: 320px) { */
   .page-header {
     background-repeat: no-repeat;
-    background-image: url("../img/page-header__bg.jpg");
+    background-image: url("../img/page-header__bg1.jpg");
+    background-size: 100% 100%;
   }
-}
+
 @media (min-width: 321px) {
   .main-content__advantage-block {
     background-color: #f1f1f1;

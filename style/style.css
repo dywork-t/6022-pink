@@ -181,6 +181,9 @@ body {
   color: #283645;
   background-color: #fff;
   text-align: center;
+  padding: 40px 0 40px 0;
+  background: url("../img/sprite-pattern-bg.png") no-repeat center bottom;
+  background-size: 100% auto;
 }
 
 .main-content__title-head {
@@ -189,9 +192,14 @@ body {
 }
 
 .main-content__advantage-block {
-  padding: 80px 6%;
+  position: relative;
+  padding: 30px 6% 300px;
   text-align: center;
-  background: url("../img/pattern_bg.png") no-repeat;
+  background: #f1f1f1 url("../img/iphone-helloy.png") no-repeat center bottom;
+}
+
+.main-content__advantage-content {
+  margin-bottom: 40px;
 }
 
 .main-content__advantage-title {
@@ -206,15 +214,166 @@ body {
   line-height: 24px;
   font-weight: 400;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+.slider-reviews {
+  position: relative;
+  padding: 47px 0 70px;
+  background: url("../img/sprite-pattern-bg.png") center bottom no-repeat;
+  background-size: 100% auto;
+}
+
+.slider-reviews__slide {
+  text-align: center;
+  padding: 0 6%;
+}
+
+.slider-reviews__slide-text {
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.slider-reviews__pagination {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 140px;
+  height: 15px;
+  text-align: center;
+  margin-left: -70px;
+}
+
+.slider-reviews__pagination-item--active {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #1d2631;
+  background: #fff;
+}
+
+.slider-reviews__pagination-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: #bec2c7;
+}
+
+.tariff-block {
+  position: relative;
+  padding: 50px 0 100px;
+  background: #f1f1f1;
+}
+
+.tariff-block__slide-head {
+  padding: 15px 0 10px;
+  text-align: center;
+  background: #1d2631;
+}
+
+.tariff-block__slide-title {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ededee;
+}
+
+.tariff-block__slide-price {
+  margin: 9px 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ededee;
+}
+
+.tariff-block__slide-flag--hit {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 74px;
+  height: 73px;
+  background: url(../img/sprite-flag--hit.png);
+}
+
+.tariff-block__slide-name-tariff {
+  position: relative;
+  padding: 21px 7%;
+  color: #000;
+  background: #fff;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.tariff-block__slide-name-title {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tariff-block__slide-check-mark {
+  position: absolute;
+  top: 17px;
+  right: 22px;
+  width: 29px;
+  height: 22px;
+  background: url("../img/slide-check-mark.png") no-repeat;
+}
+
+.tariff-block__slide-check-mark--cross {
+  position: absolute;
+  top: 17px;
+  right: 25px;
+  width: 26px;
+  height: 26px;
+  background: url("../img/slide-check-mark--no.png") no-repeat;
+}
+
+.tariff-block__table {
+  display: none;
+}
+
+.tariff-block__slider-pagination {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  width: 140px;
+  height: 15px;
+  text-align: center;
+  margin-left: -70px;
+}
+
+.tariff-block__slider-pagination-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #f2f2f2;
+  background: #bec2c7;
+}
+
+.tariff-block__slider-pagination-item--active {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #1d2631;
+  background: #fff;
 }
 
 /* Стили адаптации*/
-@media (max-width: 320px) {
-  .page-header {
-    background-repeat: no-repeat;
-    background-image: url("../img/page-header__bg.jpg");
-  }
+/* @media(max-width: 320px) { */
+.page-header {
+  background-repeat: no-repeat;
+  background-image: url("../img/page-header__bg1.jpg");
+  background-size: 100% 100%;
 }
 
 @media (min-width: 321px) {
