@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/* Стили типографики */
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+/* Стили страницы */
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-header {
+  color: #d3d4d5;
+  background-color: #1d2631;
+}
+
+.page-header__top-line {
+  padding: 20px 6%;
+  background: rgba(29, 38, 49, 0.65);
+}
+
+.page-header__content {
+  height: 356px;
+  padding: 30px 13%;
+  text-align: center;
+  background: url("../img/iphone-hend.png") no-repeat center bottom;
+}
+
+.page-header__title {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.main-logo {
+  float: left;
+  width: 22%;
+}
+
+.main-logo__link {
+  line-height: 0.9em;
+  font-family: "Gotham Rounded";
+  font-size: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.toggle-menu {
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: 6%;
+  width: 50px;
+  height: 4px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 0;
+}
+
+.toggle-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: #fff;
+}
+
+.toggle-menu::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: #fff;
+}
+
+.main-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 69px;
+  left: 0;
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-menu__list a {
+  display: block;
+  padding: 18px 0;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1d2631;
+}
+
+.download-block {
+  width: 100%;
+  color: #d3d4d5;
+}
+
+.download-block__wrap {
+  padding: 28px 6%;
+  text-align: center;
+}
+
+.download-block__btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 14px 44px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 40px;
+}
+
+.download-block__img {
+  margin-bottom: 1px;
+}
+
+.download-block__img-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 35px;
+  margin-top: 5px;
+}
+
+.download-block__img-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.main-content__headtitle {
+  color: #283645;
+  background-color: #fff;
+  text-align: center;
+}
+
+.main-content__title-head {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.main-content__advantage-block {
+  padding: 80px 6%;
+  text-align: center;
+  background: url("../img/pattern_bg.png") no-repeat;
+}
+
+.main-content__advantage-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main-content__advantage-text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* Стили адаптации*/
+@media (max-width: 320px) {
+  .page-header {
+    background-repeat: no-repeat;
+    background-image: url("../img/page-header__bg.jpg");
+  }
+}
+
+@media (min-width: 321px) {
+  .main-content__advantage-block {
+    background-color: #f1f1f1;
+  }
+}

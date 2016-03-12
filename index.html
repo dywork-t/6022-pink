@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
+  <header class="page-header  clearfix">
 
-  <header class="page-header">
+    <div class="page-header__top-line  clearfix">
 
-    <div class="page-header__top-line">
+      <div class="page-header__top-line-wrap">
 
-      <div class="logo">
+        <div class="main-logo">
 
-        <a href="#" class="main-logo">
-          <img src="jpg/logo.svg" alt="Pink">
-        </a>
+          <a href="index.html" class="main-logo__link">
+            Pink
+          </a>
 
-      </div>
+        </div>
 
-      <div class="page-header__nav-wrap">
+        <button class="toggle-menu  toggle-menu--close">
+          Меню
+        </button>
 
-        <button class="page-header__toggle-nav  page-header__toggle-nav--closed"></button>
+        <div class="main-menu">
 
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item--active"><a href="#">Информация</a></li>
-            <li><a href="#">Возможности</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Стоимость</a></li>
-          </ul>
-        </nav>
+          <nav class="main-menu__main-nav">
+
+            <ul class="main-menu__list">
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Возможности</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Стоимость</a></li>
+            </ul>
+
+          </nav>
+
+        </div>
 
       </div>
 
@@ -40,7 +48,13 @@
 
     <div class="page-header__content">
 
-      <h2>Взгляните на жизнь иначе!</h2>
+      <div class="page-header__content-warp">
+
+      <h2 class="page-header__title">Взгляните на жизнь иначе!</h2>
+
+      </div>
+
+   </div>
 
       <div class="download-block">
 
@@ -49,348 +63,73 @@
           <a href="#" class="download-block__btn">Скачать приложение</a>
 
           <div class="download-block__img">
-            <img src="#" alt="iPhone">
-            <img src="#" alt="android">
-            <img src="#" alt="windows">
+
+            <div class="download-block__img-item">
+              <img src="img/iphone-icon.png" alt="iPhone" width="46" height="57">
+            </div>
+
+            <div class="download-block__img-item">
+              <img src="img/android-icon.png" alt="android" width="42" height="47">
+            </div>
+
+            <div class="download-block__img-item">
+              <img src="img/windows-icon.png" alt="windows" width="44" height="42">
+            </div>
+
           </div>
 
-          <p class="download-block__text">
-            Доступно для iPhone, iPad, Android, Windows phone,
-            Mac OS, Windows 8
-          </p>
+          <div class="download-block__text">
+
+            <p>
+              Доступно для iPhone, iPad, Android, Windows phone,
+              Mac OS, Windows 8
+            </p>
+
+          </div>
 
         </div>
 
       </div>
-
-    </div>
 
   </header>
 
-  <section class="features">
+  <main class="main-content">
 
-    <div class="featuris__wrap">
+    <div class="main-content__wrap">
 
-      <header class="features__header">
+      <section class="main-content__headtitle">
 
-        <h2 class="features__header-title">Устали от сертости мегаполиса?</h2>
-        <h2 class="features__header-title">Нам есть, что вам предложить!</h2>
+        <h2 class="main-content__title-head">
+          Устали от серости мегаполиса?
+        </h2>
+        <h2 class="main-content__title-head">
+          Нам есть что вам предложить!
+        </h2>
 
-      </header>
+      </section>
 
-      <div class="features-descr">
+      <section class="main-content__advantage-block">
 
-        <div class="features-descr__img">
-
-          <div class="features-descr__img-warp">
-            <img src="img/" alt="grayImg">
-          </div>
-
-          <div class="features-descr__img-warp">
-            <img src="img/" alt="pinkImg">
-          </div>
-
-          <div class="features-descr__img-warp">
-            <img src="img/" alt="pinkImg-smile">
-          </div>
-
-        </div>
-
-        <article class="features-descr__text-block">
-
-          <h2 class="features-descr__title">Поднимает настроение</h2>
-          <p class="features-descr__text">
-            Приложение позволит вам победить осеннюю хандру
-            и депрессию буквально в несколько кликов!
-          </p>
-
-        </article>
-
-        <article class="features-descr__text-block">
-
-          <h2 class="features-descr__title">Меняет мир вокруг</h2>
-          <p class="features-descr__text">
-            Сделайте снимок и украсьте его смайликом или текстовой
-            подписью, чтобы учсилить эффект
-          </p>
-
-        </article>
-
-        <article class="features-descr__text-block">
-
-          <h2 class="features-descr__title">Заводит новых друзей</h2>
-          <p class="features-descr__text">
-            Ставьте лайки, комментируйте, делитесь фотографиями
-            с друзьями и заводите новых
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="scientific-block">
-
-    <div class="scientific-block__wrap">
-
-      <div class="scientific-block__img">
-        <img src="img/" alt="24h">
-      </div>
-
-      <section class="scientific-block__desr">
-
-        <h2 class="scientific-block__title">Эффект на 24 часа!</h2>
-        <p class="scientific-block_text">
-          Британские ученые провели исследования и доказали, что положительный эффект
-          от использования приложения длится целые сутки!
+        <h2 class="main-content__advantage-title">Поднимает настроение</h2>
+        <p class="main-content__advantage-text">
+          Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
         </p>
-        <a href="#" class="sciantific-block__link">Узнать больше об исследовании</a>
 
-      </section>
+        <h2 class="main-content__advantage-title">Меняет мир вокруг</h2>
+        <p class="main-content__advantage-text">
+          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        </p>
 
-    </div>
-
-  </div>
-
-  <div class="comment-block">
-
-    <div class="comment-block__wrap">
-
-      <div class="comment-block__img">
-        <img src="img/" alt="quote">
-      </div>
-
-      <article class="comment-block__slide-block">
-
-        <div class="comment-block__slide-title">
-
-          <h2 class="comment-block__title">Николай Петров</h2>
-          <p class="comment-block__authors-desr">25 лет, водитель трамвая</p>
-
-        </div>
-
-        <div class="comment-block__slide-content">
-
-          <p class="comment-block__slide-text">
-            Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные сервые вещи! А ещё я
-            познакомился со своей будущей жено в комментариях в кыложенной фотографии!
-          </p>
-
-        </div>
-
-        <div class="comment-block__slide-actions">
-
-          <i class="comment-block__slide-item--active"></i>
-          <i></i>
-          <i></i>
-
-        </div>
-
-      </article>
-
-      <article class="comment-block__slide-block">
-
-        <div class="comment-block__slide-title">
-
-          <h2 class="comment-block__title">Имя автора</h2>
-          <p class="comment-block__authors-desr">Описание автора</p>
-
-        </div>
-
-        <div class="comment-block__slide-content">
-
-          <p class="comment-block__slide-text">
-            Содержание комментария
-          </p>
-
-        </div>
-
-        <div class="comment-block__slide-actions">
-
-          <i class="comment-block__slide-item--active"></i>
-          <i></i>
-          <i></i>
-
-        </div>
-
-      </article>
-
-      <article class="comment-block__slide-block">
-
-        <div class="comment-block__slide-title">
-
-          <h2 class="comment-block__title">Имя автора</h2>
-          <p class="comment-block__authors-desr">Описание автора</p>
-
-        </div>
-
-        <div class="comment-block__slide-content">
-
-          <p class="comment-block__slide-text">
-            Содержание комментария
-          </p>
-
-        </div>
-
-        <div class="comment-block__slide-actions">
-
-          <i class="comment-block__slide-item--active"></i>
-          <i></i>
-          <i></i>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-  <div class="tariff">
-
-    <div class="tariff__warp">
-
-      <table class="tariff__table">
-        <tr>
-          <td class="tariff__table-col-1"></td>
-          <td class="tariff__table-col-2">
-            <h2 class="tariff__table-col-title">База</h2>
-            <p class="tariff__table-col-price">1,99 USD</p>
-          </td>
-          <td class="tariff__table-col-3">
-            <div class="tariff__flag  tariff__flag--hit"></div>
-            <h2 class="tariff__table-col-title">Стандарт</h2>
-            <p class="tariff__table-col-price">3,99 USD</p>
-          </td>
-          <td class="tariff__table-col-4">
-            <h2 class="tariff__table-col-title">Анлим</h2>
-            <p class="tariff__table-col-price">9,99 USD</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="tariff__table-col-5">Розовый фильтр</td>
-          <td class="tariff__table-col-6">
-            <div class="tariff__check-mark"></div>
-          </td>
-          <td class="tariff__table-col-7">
-            <div class="tariff__check-mark"></div>
-          </td>
-          <td class="tariff__table-col-8">
-            <div class="tariff__check-mark"></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="tariff__table-col-9">Смайлики</td>
-          <td class="tariff__table-col-10">
-            <div class="tariff__check-mark--cross"></div>
-          </td>
-          <td class="tariff__table-col-11">
-            <div class="tariff__check-mark"></div>
-          </td>
-          <td class="tariff__table-col-12">
-            <div class="tariff__check-mark"></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="tariff__table-col-13">Комментарии</td>
-          <td class="tariff__table-col-14">
-            <div class="tariff__check-mark--cross"></div>
-          </td>
-          <td class="tariff__table-col-15">
-            <div class="tariff__check-mark--cross"></div>
-          </td>
-          <td class="tariff__table-col-16">
-            <div class="tariff__check-mark"></div>
-          </td>
-        </tr>
-      </table>
-
-      <div class="tariff_pagination">
-        <i class="tariff_pagination-item--active"></i>
-        <i></i>
-        <i></i>
-      </div>
-
-    </div>
-
-  </div>
-
-  <section class="contact-us">
-
-    <div class="contact-us__wrap">
-
-      <h2 class="contact-us__title">Остались вопросы? Свяжитесь с нами!</h2>
-
-      <section class="contact-us__info">
-
-        <h2 class="contact-us__info-title">Звоните</h2>
-        <p class="contact-us__info-content">8 (800) 1000 900</p>
-
-      </section>
-
-      <section class="contact-us__info">
-
-        <h2 class="contact-us__info-title">Пишите:</h2>
-        <p class="contact-us__info-content">hello@pinkapp.ru</p>
-
-      </section>
-
-      <section class="contact-us__info">
-
-        <h2 class="contact-us__info-title">Приезжайте в гости:</h2>
-        <p class="contact-us__info-content">
-          Санкт-Петербург, Невский проспект д.20
+        <h2 class="main-content__advantage-title">Заводит новых друзей</h2>
+        <p class="main-content__advantage-text">
+          Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
         </p>
 
       </section>
 
     </div>
 
-  </section>
-
-  <div class="map">
-    <img src="jpg/" alt="map">
-  </div>
-
-  <footer class="page-footer">
-
-    <div class="footer__wrap">
-
-      <div class="logo">
-
-        <a href="#" class="main-logo">
-          <img src="jpg/logo.svg" alt="Pink">
-        </a>
-
-      </div>
-
-      <div class="footer__social">
-
-        <a href="#" class="footer__social-btn--twitter"></a>
-        <a href="#" class="footer__social-btn--facebook"></a>
-        <a href="#" class="footer__social-btn--youtube"></a>
-
-      </div>
-
-      <div class="footer__copyright">
-
-        <p class="footer__copyright-content">
-          website by
-          <a href="#" class="footer__link--by"></a>
-          for
-          <a href="#" class="footer__link--for"></a>
-        </p>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <!-- <script src="js/script.js"></script> -->
+  </main>
 
 </body>
 </html>
