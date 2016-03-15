@@ -44,6 +44,9 @@ body {
 
 .page-header {
   color: #d3d4d5;
+  background-repeat: no-repeat;
+  background-image: url("../img/page-header__bg1.jpg");
+  background-size: 100% 484px;
   background-color: #1d2631;
 }
 
@@ -66,8 +69,12 @@ body {
 }
 
 .main-logo {
-  float: left;
   width: 22%;
+}
+
+.main-logo__img {
+  display: none;
+  float: left;
 }
 
 .main-logo__link {
@@ -86,6 +93,7 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -162,7 +170,7 @@ body {
 .download-block__btn {
   display: inline-block;
   vertical-align: top;
-  padding: 14px 44px;
+  padding: 14px 36px;
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 700;
@@ -188,11 +196,15 @@ body {
   margin-right: 0;
 }
 
+.download-block-1 {
+  display: none;
+}
+
 .main-content__headtitle {
   color: #283645;
   background-color: #fff;
   text-align: center;
-  padding: 40px 0 40px 0;
+  padding: 40px 6%;
   background: url("../img/sprite-pattern-bg.png") no-repeat center bottom;
   background-size: 100% auto;
 }
@@ -417,11 +429,67 @@ body {
 }
 
 /* Стили адаптации*/
-@media (max-width: 320px) {
+@media (min-width: 700px) {
   .page-header {
-    background-repeat: no-repeat;
-    background-image: url("../img/page-header__bg.jpg");
+    background-image: url("../img/page-header__bg2.jpg");
+    background-size: 100% 727px;
+  }
+  .page-header__wrap {
+    padding: 92px 6%;
+    background: url("../img/iphone-hend1.png") no-repeat center bottom;
+  }
+  .page-header__content {
+    height: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 190px;
+    background: none;
+  }
+  .page-header__content h2 {
+    font-size: 40px;
+    font-weight: 300;
+    width: 180px;
+    margin-left: 52px;
+  }
+  .page-header__container-left {
+    display: block;
+    width: 43%;
+  }
+  .download-block {
+    width: 300px;
+  }
+  .download-block__btn {
+    padding: 14px 27px;
+  }
+  .download-block__text {
+    font-size: 18px;
+  }
+  .download-block__wrap {
+    padding: 0;
+  }
+  .main-logo {
+    width: 23%;
+  }
+  .main-logo__img {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  .main-logo__link h1 {
+    display: none;
+  }
+  .main-content__advantage-block {
+    padding: 30px 6% 0;
+    background: #f1f1f1 url("../img/iphone-helloy1.png") no-repeat left bottom;
+  }
+  .main-content__headtitle {
+    background: none;
+  }
+  .main-content__advantage-wrap {
+    background: url("../img/pattern_bg1.png") no-repeat center top;
     background-size: 100% auto;
+  }
+  .toggle-menu {
+    top: 45px;
   }
 }
 
