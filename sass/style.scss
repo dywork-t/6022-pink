@@ -378,7 +378,6 @@ body {
 .info-block {
   padding: 40px 6%;
   text-align: center;
-
   &__title {
     margin: 0;
     margin-bottom: 40px;
@@ -386,12 +385,6 @@ body {
     font-weight: 300;
   }
   &__item {
-    margin-bottom: 25px;
-  }
-  &__item--second {
-    margin-bottom: 25px;
-  }
-  &__item--center {
     margin-bottom: 25px;
   }
   &__item-title {
@@ -475,9 +468,7 @@ body {
     }
   }
   .main-logo {
-    float: left;
     width: 160px;
-    margin-right: 8%;
     &__img {
       display: block;
       margin: 0 0 10px 0;
@@ -557,7 +548,7 @@ body {
       align-items: center;
     }
     &__slide-text {
-      width: 620px;
+      width: 90%;
     }
     &__slide-subtitle {
       display: block;
@@ -640,24 +631,22 @@ body {
     }
   }
   .info-block {
+    display: flex;
     padding: 40px 8%;
+    justify-content: space-around;
+    flex-wrap: wrap;
     &__title {
+      width: 65%;
       font-size: 40px;
       font-weight: 300;
     }
     &__item {
-      float: left;
-      width: 190px;
+      width: 38%;
+      margin-bottom: 50px;
     }
-    &__item--second {
-      float: left;
-      width: 190px;
-      margin-left: 26%;
-      margin-bottom: 25px;
-    }
-    &__item--center {
-      margin: 0 auto;
-      width: 298px;
+    &__item:nth-child(4) {
+      width: 300px;
+      margin-bottom: 0;
     }
   }
   .map {
@@ -669,9 +658,10 @@ body {
     }
   }
   .page-footer {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     &__social {
-      float: left;
       width: 180px;
     }
     &__social-btn {
@@ -701,7 +691,6 @@ body {
       background-position: -112px 8px;
     }
     &__copyright {
-      float: right;
       width: 192px;
     }
     &__copyright-link {
@@ -722,7 +711,7 @@ body {
     }
   }
 }
-
+/*
 @media (min-width: 720px) {
   .info-block {
     padding: 40px 8%;
@@ -929,3 +918,4 @@ body {
     margin-right: 26%;
   }
 }
+*/

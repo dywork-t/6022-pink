@@ -411,14 +411,6 @@ body {
   margin-bottom: 25px;
 }
 
-.info-block__item--second {
-  margin-bottom: 25px;
-}
-
-.info-block__item--center {
-  margin-bottom: 25px;
-}
-
 .info-block__item-title {
   color: #283645;
   margin: 0;
@@ -499,9 +491,7 @@ body {
     padding: 0;
   }
   .main-logo {
-    float: left;
     width: 160px;
-    margin-right: 8%;
   }
   .main-logo__img {
     display: block;
@@ -587,7 +577,7 @@ body {
             align-items: center;
   }
   .slider-reviews__slide-text {
-    width: 620px;
+    width: 90%;
   }
   .slider-reviews__slide-subtitle {
     display: block;
@@ -667,25 +657,29 @@ body {
     background: url("../img/slide-check-mark--no.png") no-repeat;
   }
   .info-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     padding: 40px 8%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   .info-block__title {
+    width: 65%;
     font-size: 40px;
     font-weight: 300;
   }
   .info-block__item {
-    float: left;
-    width: 190px;
+    width: 38%;
+    margin-bottom: 50px;
   }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 26%;
-    margin-bottom: 25px;
-  }
-  .info-block__item--center {
-    margin: 0 auto;
-    width: 298px;
+  .info-block__item:nth-child(4) {
+    width: 300px;
+    margin-bottom: 0;
   }
   .map__content--mobile {
     display: none;
@@ -694,10 +688,17 @@ body {
     display: block;
   }
   .page-footer {
-    display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
   .page-footer__social {
-    float: left;
     width: 180px;
   }
   .page-footer__social-btn {
@@ -724,7 +725,6 @@ body {
     background-position: -112px 8px;
   }
   .page-footer__copyright {
-    float: right;
     width: 192px;
   }
   .page-footer__copyright-link {
@@ -743,15 +743,17 @@ body {
   }
 }
 
+/*
 @media (min-width: 720px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 28%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 28%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -763,12 +765,13 @@ body {
 @media (min-width: 768px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 33%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 33%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -780,24 +783,26 @@ body {
 @media (min-width: 810px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 36%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 36%;
+      margin-bottom: 25px;
+    }
   }
 }
 
 @media (min-width: 846px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 39%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 39%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -809,27 +814,31 @@ body {
 @media (min-width: 870px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 40%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 40%;
+      margin-bottom: 25px;
+    }
   }
 }
 
 @media (min-width: 900px) {
-  .slider-reviews__slide-text {
-    width: auto;
+  .slider-reviews {
+    &__slide-text {
+      width: auto;
+    }
   }
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 42%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 42%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -841,12 +850,13 @@ body {
 @media (min-width: 925px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 44%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 44%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -866,12 +876,13 @@ body {
 @media (min-width: 980px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 47%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 47%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -881,8 +892,10 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .main-content__advantage-block {
-    background-position: 15% bottom, 50% -1px;
+  .main-content {
+    &__advantage-block {
+      background-position: 15% bottom, 50% -1px;
+    }
   }
   .research-block {
     background-position: 15% center;
@@ -897,12 +910,13 @@ body {
 @media (min-width: 1050px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 51%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 51%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -922,12 +936,13 @@ body {
 @media (min-width: 1150px) {
   .info-block {
     padding: 40px 8%;
-  }
-  .info-block__item--second {
-    float: left;
-    width: 190px;
-    margin-left: 55%;
-    margin-bottom: 25px;
+
+    &__item--second {
+      float: left;
+      width: 190px;
+      margin-left: 55%;
+      margin-bottom: 25px;
+    }
   }
   .main-logo {
     float: left;
@@ -935,3 +950,4 @@ body {
     margin-right: 26%;
   }
 }
+*/
