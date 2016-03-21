@@ -450,8 +450,9 @@ body {
 /* Стили адаптации*/
 @media (min-width: 700px) {
   .page-header {
-    background-image: url("../img/page-header__bg2.jpg");
-    background-size: 100% 727px;
+    background-image: url("../img/iphone-hend1.png"), url("../img/page-header__bg2.jpg");
+    background-size: auto auto ,100% 100%;
+    background-position: center bottom, center top;
   }
   .page-header__top-line {
     padding: 20px 0;
@@ -459,13 +460,13 @@ body {
   .page-header__wrap {
     padding-top: 92px;
     padding-bottom: 92px;
-    background: url("../img/iphone-hend1.png") no-repeat center bottom;
+    background: no-repeat center bottom;
   }
   .page-header__content {
-    height: 0;
+    height: auto;
     padding: 0;
     text-align: center;
-    margin-bottom: 190px;
+    margin-bottom: 0;
     background: none;
   }
   .page-header__content h2 {
@@ -542,8 +543,10 @@ body {
     background-repeat: no-repeat;
     background-position: 6% center;
   }
-  .research-block__content {
+  .research-block__wrap {
     float: right;
+  }
+  .research-block__content {
     width: 310px;
     text-align: left;
   }
