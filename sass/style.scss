@@ -14,6 +14,19 @@ $text-color: #283645;
 $text-color--white: #d3d4d5;
 $text-color--red: #d54166;
 
+@function rem($pxs) {
+  @if type_of($pxs) == list {
+    $rem: ();
+    @each $px in $pxs {
+      $rem: append($rem, $px / 16 * 1rem);
+    }
+  } @else {
+    $rem: $pxs / 16 * 1rem;
+  }
+
+  @return $rem;
+}
+
 /* Стили типографики */
 h1 {
   font-size: $font-size-h1;
@@ -411,7 +424,10 @@ body {
 
 /* Карта */
 .map {
-  &__content--tablet {
+  &__img--tablet {
+    display: none;
+  }
+  &__img--desktop {
     display: none;
   }
 }
@@ -651,10 +667,10 @@ body {
     }
   }
   .map {
-    &__content--mobile {
+    &__img--mobile {
       display: none;
     }
-    &__content--tablet {
+    &__img--tablet {
       display: block;
     }
   }
@@ -714,6 +730,10 @@ body {
 }
 
 @media (min-width: 1200px) {
+  p, a {
+    font-size: 18px;
+  }
+
   .page-header {
     background-image: url("../img/iphone-hend1.png"), url("../img/page-header__bg3.jpg");
     background-size: auto auto, 1440px 910px;
@@ -785,6 +805,8 @@ body {
       padding-left: 0;
       padding-right: 0;
       background-image: url("../img/pattern_bg2.png");
+      background-color: #fff;
+      background-size: 100% auto;
       background-position: 50% -1px;
     }
     &__advantage-block-wrap {
@@ -823,6 +845,133 @@ body {
       width: 300px;
       height: 17px;
       background: url("../img/iphone-shadow.png");
+    }
+  }
+  .research-block {
+    display: block;
+    padding: 10px 0 30px;
+    background-image: none;
+    background-color: #f2f2f2;
+    &__wrap {
+      float: none;
+      padding-top: 59px;
+      padding-bottom: 70px;
+      background-image: url("../img/timer.png");
+      background-repeat: no-repeat;
+    }
+    &__content {
+      width: 54%;
+      margin-left: 360px;
+    }
+    &__title {
+      width: 500px;
+      text-align: left;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+  .slider-reviews {
+    background: url("../img/quotes.png") no-repeat center 67px;
+    &__slide {
+      position: relative;
+      padding-top: 120px;
+    }
+    &__slide-text {
+      font-size: 18px;
+    }
+    &__pagination {
+      display: none;
+    }
+    &__action-item {
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      top: 164px;
+      left: 0;
+      width: 27px;
+      height: 46px;
+      background: url("../img/sprite-arrow.png");
+      cursor: pointer;
+    }
+    &__action-item--right {
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      top: 164px;
+      right: 0;
+      width: 27px;
+      height: 46px;
+      background: url("../img/sprite-arrow.png");
+      background-position: -7px -82px;
+      cursor: pointer;
+    }
+  }
+  .tariff-block {
+    padding: 150px 0 100px;
+    background-image: url("../img/pattern_bg2.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+    &__table {
+      font-size: 18px;
+      td {
+        padding: 20px 1.5%;
+      }
+      .tariff-block__table-row-1 {
+        td {
+          padding: 7px 0;
+        }
+      }
+    }
+    &__table-trftitle {
+      font-size: 18px;
+    }
+    &__table-price {
+      font-size: 24px;
+    }
+  }
+  .info-block {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px 70px;
+    justify-content: space-between;
+    &__title {
+      font-size: 50px;
+      margin: 0 175px 62px;
+    }
+    &__item {
+      width: 183px;
+    }
+    &__item:nth-child(2) {
+      order: 1;
+    }
+    &__item-title {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    &__item-text {
+      font-size: 24px;
+    }
+  }
+  .map {
+    &__img--mobile {
+      display: none;
+    }
+    &__img--tablet {
+      display: none;
+    }
+    &__img--desktop {
+      display: block;
+    }
+  }
+  .page-footer {
+    width: 960px;
+    margin: 0 auto;
+    padding: 65px 10px;
+    justify-content: space-between;
+    &__copyright {
+      width: 217px;
     }
   }
 }

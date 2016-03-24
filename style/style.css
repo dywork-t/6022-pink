@@ -442,7 +442,11 @@ body {
 }
 
 /* Карта */
-.map__content--tablet {
+.map__img--tablet {
+  display: none;
+}
+
+.map__img--desktop {
   display: none;
 }
 
@@ -689,10 +693,10 @@ body {
     width: 300px;
     margin-bottom: 0;
   }
-  .map__content--mobile {
+  .map__img--mobile {
     display: none;
   }
-  .map__content--tablet {
+  .map__img--tablet {
     display: block;
   }
   .page-footer {
@@ -752,6 +756,9 @@ body {
 }
 
 @media (min-width: 1200px) {
+  p, a {
+    font-size: 18px;
+  }
   .page-header {
     background-image: url("../img/iphone-hend1.png"), url("../img/page-header__bg3.jpg");
     background-size: auto auto, 1440px 910px;
@@ -818,6 +825,8 @@ body {
     padding-left: 0;
     padding-right: 0;
     background-image: url("../img/pattern_bg2.png");
+    background-color: #fff;
+    background-size: 100% auto;
     background-position: 50% -1px;
   }
   .main-content__advantage-block-wrap {
@@ -860,5 +869,134 @@ body {
     width: 300px;
     height: 17px;
     background: url("../img/iphone-shadow.png");
+  }
+  .research-block {
+    display: block;
+    padding: 10px 0 30px;
+    background-image: none;
+    background-color: #f2f2f2;
+  }
+  .research-block__wrap {
+    float: none;
+    padding-top: 59px;
+    padding-bottom: 70px;
+    background-image: url("../img/timer.png");
+    background-repeat: no-repeat;
+  }
+  .research-block__content {
+    width: 54%;
+    margin-left: 360px;
+  }
+  .research-block__title {
+    width: 500px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  .slider-reviews {
+    background: url("../img/quotes.png") no-repeat center 67px;
+  }
+  .slider-reviews__slide {
+    position: relative;
+    padding-top: 120px;
+  }
+  .slider-reviews__slide-text {
+    font-size: 18px;
+  }
+  .slider-reviews__pagination {
+    display: none;
+  }
+  .slider-reviews__action-item {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    top: 164px;
+    left: 0;
+    width: 27px;
+    height: 46px;
+    background: url("../img/sprite-arrow.png");
+    cursor: pointer;
+  }
+  .slider-reviews__action-item--right {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    top: 164px;
+    right: 0;
+    width: 27px;
+    height: 46px;
+    background: url("../img/sprite-arrow.png");
+    background-position: -7px -82px;
+    cursor: pointer;
+  }
+  .tariff-block {
+    padding: 150px 0 100px;
+    background-image: url("../img/pattern_bg2.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #fff;
+  }
+  .tariff-block__table {
+    font-size: 18px;
+  }
+  .tariff-block__table td {
+    padding: 20px 1.5%;
+  }
+  .tariff-block__table .tariff-block__table-row-1 td {
+    padding: 7px 0;
+  }
+  .tariff-block__table-trftitle {
+    font-size: 18px;
+  }
+  .tariff-block__table-price {
+    font-size: 24px;
+  }
+  .info-block {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px 70px;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .info-block__title {
+    font-size: 50px;
+    margin: 0 175px 62px;
+  }
+  .info-block__item {
+    width: 183px;
+  }
+  .info-block__item:nth-child(2) {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .info-block__item-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .info-block__item-text {
+    font-size: 24px;
+  }
+  .map__img--mobile {
+    display: none;
+  }
+  .map__img--tablet {
+    display: none;
+  }
+  .map__img--desktop {
+    display: block;
+  }
+  .page-footer {
+    width: 960px;
+    margin: 0 auto;
+    padding: 65px 10px;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page-footer__copyright {
+    width: 217px;
   }
 }

@@ -27,6 +27,7 @@
             </picture>
 
             <h1>Pink</h1>
+
           </a>
 
         </div>
@@ -38,14 +39,12 @@
         <div class="main-menu">
 
           <nav class="main-menu__main-nav">
-
             <ul class="main-menu__list">
               <li><a href="#">Информация</a></li>
               <li><a href="#">Возможности</a></li>
               <li><a href="#">Отзывы</a></li>
               <li><a href="#">Стоимость</a></li>
             </ul>
-
           </nav>
 
         </div>
@@ -170,22 +169,26 @@
 
       </section>
 
-      <section class="research-block  clearfix">
+      <section class="research-block">
 
-        <section class="research-block__wrap">
+        <div class="container  clearfix">
 
-          <section class="research-block__content">
+          <section class="research-block__wrap  clearfix">
 
-            <h2 class="research-block__title">Эффект на 24 часа!</h2>
-            <p class="research-block__text">
-              Британские ученые провели исследования и доказали, что положительный эффект
-              от использования приложения длится целые сутки!
-            </p>
-            <a href="#" class="research-block__link">Узнать больше об исследовании</a>
+            <section class="research-block__content">
+
+              <h2 class="research-block__title">Эффект на 24 часа!</h2>
+              <p class="research-block__text">
+                Британские ученые провели исследования и доказали, что положительный эффект
+                от использования приложения длится целые сутки!
+              </p>
+              <a href="#" class="research-block__link">Узнать больше об исследовании</a>
+
+            </section>
 
           </section>
 
-        </section>
+        </div>
 
       </section>
 
@@ -193,28 +196,37 @@
 
     <section class="slider-reviews">
 
-      <section class="slider-reviews__slide">
+      <div class="container">
 
-        <div class="slider-reviews__slide-wrap">
+        <section class="slider-reviews__slide">
 
-          <h2 class="slider-reviews__slide-title">Николай Петров</h2>
-          <p class="slider-reviews__slide-subtitle">
-            25 лет, водитель трамвая
+          <div class="slider-reviews__slide-wrap">
+
+            <h2 class="slider-reviews__slide-title">Николай Петров</h2>
+            <p class="slider-reviews__slide-subtitle">
+              25 лет, водитель трамвая
+            </p>
+
+          </div>
+
+          <p class="slider-reviews__slide-text">
+            &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+            А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
           </p>
 
+          <div class="slider-reviews__action">
+            <i class="slider-reviews__action-item"></i>
+            <i class="slider-reviews__action-item--right"></i>
+          </div>
+
+        </section>
+
+        <div class="slider-reviews__pagination">
+          <i class="slider-reviews__pagination-item--active"></i>
+          <i class="slider-reviews__pagination-item"></i>
+          <i class="slider-reviews__pagination-item"></i>
         </div>
 
-        <p class="slider-reviews__slide-text">
-          &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
-        </p>
-
-      </section>
-
-      <div class="slider-reviews__pagination">
-        <i class="slider-reviews__pagination-item--active"></i>
-        <i class="slider-reviews__pagination-item"></i>
-        <i class="slider-reviews__pagination-item"></i>
       </div>
 
     </section>
@@ -330,13 +342,17 @@
 
     <div class="map">
 
-      <div class="map__content--mobile">
-        <img src="img/map.jpg" width="100%" height="auto" alt="Карта">
-      </div>
+        <div class="map__img--mobile">
+          <img src="img/map.jpg" width="100%" height="auto" alt="Карта">
+        </div>
 
-      <div class="map__content--tablet">
-        <img src="img/map1.jpg" width="100%" height="auto" alt="Карта">
-      </div>
+        <div class="map__img--tablet">
+          <img src="img/map1.jpg" width="100%" height="auto" alt="Карта">
+        </div>
+
+        <div class="map__img--desktop">
+          <img src="img/map2.jpg" width="100%" height="auto" alt="Карта">
+        </div>
 
     </div>
 
