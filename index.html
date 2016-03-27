@@ -21,8 +21,9 @@
 
             <picture>
 
-              <source media="(min-width: 1200px)" srcset="img/glasses-icon2.png 145w">
-              <img src="img/glasses-icon.png" class="main-logo__img" alt="Pink" width="145" height="40">
+              <source media="(min-width: 1200px)" srcset="img/Pink-logo-3@1x.png 1x, img/Pink-logo-3@2x.png 2x">
+              <source media="(min-width: 700px)" srcset="img/Pink-logo-2@1x.png 1x, img/Pink-logo-2@2x.png 2x">
+              <img src="img/logo-1.svg" class="main-logo__img" alt="Pink">
 
             </picture>
 
@@ -32,9 +33,11 @@
 
         </div>
 
-        <button class="toggle-menu  toggle-menu--close">
-          Меню
-        </button>
+        <div class="toggle-menu">
+
+          <div class="toggle-menu__btn"></div>
+
+        </div>
 
         <div class="main-menu">
 
@@ -328,9 +331,9 @@
           <p class="info-block__item-text">8 (800) 1000 900</p>
         </section>
 
-        <section class="info-block__item">
+        <section class="info-block__item--hover">
           <h2 class="info-block__item-title">Пишите:</h2>
-          <p class="info-block__item-text">hello@pinkapp.ru</p>
+          <a class="info-block__item-text">hello@pinkapp.ru</a>
         </section>
 
         <section class="info-block__item">
@@ -363,7 +366,15 @@
       <div class="main-logo">
 
         <a href="index.html" class="main-logo__link">
-          <img src="img/glasses-icon1.png" class="main-logo__img" alt="download" width="145" height="40">
+
+          <picture>
+
+            <source media="(min-width: 1200px)" srcset="img/Pink-logo-footer-3@1x.png 1x, img/Pink-logo-footer-3@2x.png 2x">
+            <source srcset="img/Pink-logo-footer-2@1x.png 1x, img/Pink-logo-footer-2@2x.png 2x">
+            <img src="img/Pink-logo-footer-2@1x.png" class="main-logo__img" alt="Pink">
+
+          </picture>
+
         </a>
 
       </div>
@@ -390,6 +401,8 @@
       </div>
 
   </footer>
+
+  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
