@@ -45,7 +45,7 @@ body {
 .page-header {
   color: #d3d4d5;
   background-repeat: no-repeat;
-  background-image: url("../img/background-1@1x.jpg");
+  background-image: url("../img/320/background-1@1x.jpg");
   background-size: 100% 484px;
   background-color: #263241;
 }
@@ -56,10 +56,14 @@ body {
 }
 
 .page-header__content {
-  height: 356px;
-  padding: 30px 13%;
+  padding: 30px 10% 298px;
   text-align: center;
-  background: url("../img/iphone-hand-1.png") no-repeat center bottom;
+  background: url("../img/320/iphone-hand-1.png") no-repeat center bottom;
+}
+
+.page-header__content-wrap {
+  width: 235px;
+  margin: 0 auto;
 }
 
 .page-header__title {
@@ -238,11 +242,13 @@ body {
 
 .main-content__headtitle {
   color: #283645;
-  background-color: #fff;
   text-align: center;
   padding: 40px 6%;
-  background: url("../img/sprite-pattern-bg.png") no-repeat center bottom;
+  background-image: url("../img/Triangle.svg");
   background-size: 100% auto;
+  background-position: 4px bottom;
+  background-color: #fff;
+  background-repeat: no-repeat;
 }
 
 .main-content__title-head {
@@ -259,7 +265,7 @@ body {
   position: relative;
   padding: 30px 6% 300px;
   text-align: center;
-  background: #f1f1f1 url("../img/iphone-helloy.png") no-repeat center bottom;
+  background: #f1f1f1 url("../img/320/screen-1-3.png") no-repeat center bottom;
 }
 
 .main-content__advantage-content {
@@ -284,7 +290,8 @@ body {
 .slider-reviews {
   position: relative;
   padding: 47px 0 70px;
-  background: url("../img/sprite-pattern-bg.png") center bottom no-repeat;
+  background: url("../img/Triangle.svg") no-repeat bottom center;
+  background-color: #fff;
   background-size: 100% auto;
 }
 
@@ -396,9 +403,6 @@ body {
   position: absolute;
   top: 17px;
   right: 22px;
-  width: 29px;
-  height: 22px;
-  background: url("../img/slide-check-mark.png") no-repeat;
 }
 
 .tariff-block__slide-check-mark--cross {
@@ -518,14 +522,21 @@ body {
 }
 
 /* Стили адаптации*/
+/* Адаптация изображений под ретина-дисплеи */
+@media (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 700px), (min-resolution: 1.5dppx) and (min-width: 700px) {
+  .page-header {
+    background-image: url("../img/700/iphone-hand-2@2x.png"), url("../img/700/background-2@2x.jpg");
+  }
+}
+
 @media (min-width: 700px) {
   .page-header {
-    background-image: url("../img/iphone-hand-2@1x.png"), url("../img/background-2@1x.jpg");
-    background-size: auto auto ,100% 100%;
+    background-image: url("../img/700/iphone-hand-2@1x.png"), url("../img/700/background-2@1x.jpg");
+    background-size: auto auto, 100% 730px;
     background-position: center bottom, center top;
   }
   .page-header__top-line {
-    padding: 20px 0;
+    padding: 35px 0;
   }
   .page-header__wrap {
     padding-top: 92px;
@@ -545,12 +556,16 @@ body {
     width: 180px;
     margin-left: 64px;
   }
+  .page-header__content-wrap {
+    width: auto;
+    margin: 0;
+  }
   .container {
     padding: 0 6%;
     margin: 0 auto;
   }
   .main-menu {
-    padding: 85px 0 0;
+    padding: 103px 0 0;
   }
   .download-block {
     width: 310px;
@@ -589,12 +604,26 @@ body {
     margin: 0 auto;
   }
   .main-content__advantage-block {
+    position: relative;
     padding-top: 57px;
     padding-bottom: 7px;
-    background-image: url("../img/iphone-helloy1.png"), url("../img/pattern_bg1.png");
+    background-image: url("../img/700/iphone-screen-2-3@1x.png"), url("../img/Triangle.svg");
     background-size: auto auto, 100% auto;
-    background-position: 6% bottom, 50% -1px;
+    background-position: 6% bottom, center top;
     background-repeat: no-repeat;
+    z-index: 100;
+  }
+  .main-content__advantage-block::before {
+    position: relative;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 67px;
+    background-image: url("../img/Triangle.svg");
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 10;
   }
   .main-content__advantage-block-wrap {
     float: right;
@@ -844,8 +873,8 @@ body {
     height: 40px;
   }
   .page-header {
-    background-image: url("../img/iphone-hand-3@1x.png"), url("../img/background-fullsize.jpg");
-    background-size: auto auto, 100% 910px;
+    background-image: url("../img/1200/iphone-hand-3@1x.png"), url("../img/1200/background-fullsize.jpg");
+    background-size: auto auto, 100% 853px;
   }
   .page-header__content h2 {
     width: 240px;
