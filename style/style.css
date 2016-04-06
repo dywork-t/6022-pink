@@ -289,7 +289,7 @@ body {
 
 .slider-reviews {
   position: relative;
-  padding: 47px 0 70px;
+  padding: 0 0 70px;
   background: url("../img/Triangle.svg") no-repeat bottom center;
   background-color: #fff;
   background-size: 100% auto;
@@ -527,6 +527,9 @@ body {
   .page-header {
     background-image: url("../img/700/iphone-hand-2@2x.png"), url("../img/700/background-2@2x.jpg");
   }
+  .main-content__advatage-block {
+    background-image: url("../img/700/iphone-screen-2-3@2x.png");
+  }
 }
 
 @media (min-width: 700px) {
@@ -607,23 +610,10 @@ body {
     position: relative;
     padding-top: 57px;
     padding-bottom: 7px;
-    background-image: url("../img/700/iphone-screen-2-3@1x.png"), url("../img/Triangle.svg");
-    background-size: auto auto, 100% auto;
-    background-position: 6% bottom, center top;
+    background-image: url("../img/700/iphone-screen-2-3@1x.png");
+    background-position: 6% bottom;
     background-repeat: no-repeat;
     z-index: 100;
-  }
-  .main-content__advantage-block::before {
-    position: relative;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 67px;
-    background-image: url("../img/Triangle.svg");
-    background-size: 100% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 10;
   }
   .main-content__advantage-block-wrap {
     float: right;
@@ -633,19 +623,43 @@ body {
     width: 310px;
   }
   .main-content__headtitle {
-    padding: 40px 0;
-    background: none;
+    padding: 40px 0 10%;
   }
   .toggle-menu {
     top: 12px;
     height: 40px;
   }
   .research-block {
+    position: relative;
     display: block;
     padding: 90px 6%;
     background-image: url("../img/timer.png");
     background-repeat: no-repeat;
     background-position: 6% center;
+  }
+  .research-block::before {
+    content: "24";
+    position: absolute;
+    top: 127px;
+    left: 71px;
+    padding: 25px 36px;
+    font-size: 106px;
+    font-weight: 700;
+    border: 5px solid #d22856;
+    border-radius: 50%;
+    color: #d22856;
+    z-index: 1;
+  }
+  .research-block::after {
+    content: "";
+    position: absolute;
+    top: 51px;
+    left: 36px;
+    display: block;
+    width: 271px;
+    height: 315px;
+    background: url("../img/timer-2.svg") no-repeat;
+    background-size: 100% auto;
   }
   .research-block__wrap {
     float: right;
@@ -690,7 +704,7 @@ body {
     display: block;
   }
   .tariff-block {
-    padding: 150px 0 100px;
+    padding: 66px 0 100px;
     background: #f1f1f1 url("../img/pattern_bg1.png") no-repeat;
   }
   .tariff-block__slider {
@@ -816,15 +830,12 @@ body {
   .page-footer__social-btn {
     display: inline-block;
     vertical-align: middle;
-    width: 45px;
-    height: 45px;
+    padding: 15px 15px;
     margin-left: 8px;
     margin-bottom: 5px;
     font-size: 0;
     border: 3px solid #e9ebec;
     border-radius: 50%;
-    background: url("../img/sprite-icon.png") no-repeat;
-    background-position: 15px 8px;
     cursor: pointer;
     transition: 180ms border ease-in-out;
   }
@@ -846,16 +857,14 @@ body {
   .page-footer__copyright-link {
     display: inline-block;
     vertical-align: middle;
-    width: 28px;
-    height: 35px;
     margin-left: 10px;
     margin-right: 10px;
-    background: url("../img/sprite-icon.png") no-repeat;
-    background-position: -201px 1px;
   }
   .page-footer__copyright-link--for {
     margin-right: 0;
-    background-position: -281px 1px;
+  }
+  .page-footer__copyright-link:hover svg {
+    fill: #283645;
   }
 }
 
@@ -931,9 +940,6 @@ body {
   .download-block__text p {
     font-size: 18px;
   }
-  .main-content__headtitle {
-    margin-bottom: 35px;
-  }
   .main-content__title-head {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 50px;
@@ -950,7 +956,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     background-image: url("../img/pattern_bg2.png");
-    background-color: #fff;
+    background-color: #f2f2f2;
     background-size: 100% auto;
     background-position: 50% -1px;
   }
