@@ -283,7 +283,7 @@ body {
 }
 .slider-reviews {
   position: relative;
-  padding: 0 0 70px;
+  padding: 50px 0 70px;
   background: url("../img/Triangle.svg") no-repeat bottom center;
   background-color: #fff;
   background-size: 100% auto;
@@ -339,10 +339,6 @@ body {
   position: relative;
   padding: 50px 0 100px;
   background: #f1f1f1;
-
-  &__slider {
-
-  }
   &__slide-head {
     padding: 15px 0 10px;
     text-align: center;
@@ -503,6 +499,9 @@ body {
     &__advatage-block {
       background-image: url("../img/700/iphone-screen-2-3@2x.png");
     }
+    &__advantage-content-img {
+      background: url("../img/1200/iphone-screen@2x.png");
+    }
   }
 }
 
@@ -512,11 +511,10 @@ body {
     background-size: auto auto, 100% 730px;
     background-position: center bottom, center top;
     &__top-line {
-      padding: 35px 0;
+      padding: 35px 6%;
     }
     &__wrap {
-      padding-top: 92px;
-      padding-bottom: 92px;
+      padding: 92px 6%;
       background:  no-repeat center bottom;
     }
     &__content {
@@ -536,10 +534,6 @@ body {
       width: auto;
       margin: 0;
     }
-  }
-  .container {
-    padding: 0 6%;
-    margin: 0 auto;
   }
   .main-menu {
     padding: 103px 0 0;
@@ -614,11 +608,19 @@ body {
     background-image: url("../img/timer.png");
     background-repeat: no-repeat;
     background-position: 6% center;
-    &::before {
-      content: "24";
+    &__head {
+      position: relative;
+      float: left;
+      width: 271px;
+      height: 315px;
+      background: url("../img/timer-3.svg") no-repeat;
+      background-size: 100% auto;
+    }
+    &__head-text {
       position: absolute;
-      top: 127px;
-      left: 71px;
+      top: 79px;
+      left: 50%;
+      margin-left: -101px;
       padding: 25px 36px;
       font-size: 106px;
       font-weight: 700;
@@ -626,17 +628,6 @@ body {
       border-radius: 50%;
       color: #d22856;
       z-index: 1;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 51px;
-      left: 36px;
-      display: block;
-      width: 271px;
-      height: 315px;
-      background: url("../img/timer-2.svg") no-repeat;
-      background-size: 100% auto;
     }
     &__wrap {
       float: right;
@@ -673,7 +664,7 @@ body {
     }
   }
   .tariff-block {
-    padding: 66px 0 100px;
+    padding: 66px 6% 100px;
     background: #f1f1f1 url("../img/pattern_bg1.png") no-repeat;
     &__slider {
       display: none;
@@ -946,31 +937,49 @@ body {
     }
     &__advantage-content {
       width: 300px;
-      margin-right: 100px;
+      margin-right: 69px;
       text-align: center;
     }
     &__advantage-content-img {
       position: relative;
-      width: 186px;
-      height: 300px;
+      width: 292px;
+      height: 302px;
       margin: 0 auto;
-      background: url("../img/iphone-case.png");
+      background: url("../img/1200/iphone-screen@1x.png");
     }
-    &__advantage-content-img::before {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      left: -55px;
-      width: 300px;
-      height: 17px;
-      background: url("../img/iphone-shadow.png");
-    }
+  }
+  .purple-screen {
+    background-position: -326px 0;
+  }
+  .smile-screen {
+    background-position: -643px 0;
   }
   .research-block {
     display: block;
     padding: 10px 0 30px;
     background-image: none;
     background-color: #f2f2f2;
+    &__head {
+      position: relative;
+      float: left;
+      width: 271px;
+      height: 315px;
+      background: url("../img/timer-3.svg") no-repeat;
+      background-size: 100% auto;
+    }
+    &__head-text {
+      position: absolute;
+      top: 79px;
+      left: 50%;
+      margin-left: -101px;
+      padding: 25px 36px;
+      font-size: 106px;
+      font-weight: 700;
+      border: 5px solid #d22856;
+      border-radius: 50%;
+      color: #d22856;
+      z-index: 1;
+    }
     &__wrap {
       float: none;
       padding-top: 59px;
@@ -991,7 +1000,7 @@ body {
     }
   }
   .slider-reviews {
-    background: url("../img/quotes.png") no-repeat center 67px;
+    background: url("../img/quotes.svg") no-repeat center 67px;
     &__slide {
       position: relative;
       padding-top: 120px;
@@ -1010,7 +1019,7 @@ body {
       left: 0;
       width: 27px;
       height: 46px;
-      background: url("../img/sprite-arrow.png");
+      background: url("../img/arrow.svg") no-repeat;
       cursor: pointer;
     }
     &__action-item--right {
@@ -1021,17 +1030,14 @@ body {
       right: 0;
       width: 27px;
       height: 46px;
-      background: url("../img/sprite-arrow.png");
-      background-position: -7px -82px;
+      transform: rotate(180deg);
+      background: url("../img/arrow.svg") no-repeat;
       cursor: pointer;
     }
   }
   .tariff-block {
-    padding: 150px 0 100px;
-    background-image: url("../img/pattern_bg2.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-color: #fff;
+    padding: 100px 0;
+    background-color: #f2f2f2;
     &__table {
       font-size: 18px;
       td {
