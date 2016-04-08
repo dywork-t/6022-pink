@@ -244,11 +244,6 @@ body {
     color: $text-color;
     text-align: center;
     padding: 40px 6%;
-    background-image: url("../img/Triangle.svg");
-    background-size: 100% auto;
-    background-position: 4px bottom;
-    background-color: #fff;
-    background-repeat: no-repeat;
   }
   &__title-head {
     font-size: 24px;
@@ -581,8 +576,10 @@ body {
       position: relative;
       padding-top: 57px;
       padding-bottom: 7px;
-      background-image: url("../img/700/iphone-screen-2-3@1x.png");
-      background-position: 6% bottom;
+      background-image: url("../img/700/iphone-screen-2-3@1x.png"), url("../img/Triangle.svg");
+      background-color: #fff;
+      background-position: 6% bottom, 50% 0;
+      background-size: auto auto, 100% auto;
       background-repeat: no-repeat;
       z-index: 100;
     }
@@ -594,7 +591,7 @@ body {
       width: 310px;
     }
     &__headtitle {
-      padding: 40px 0 10%;
+      padding: 82px 0;
     }
   }
   .toggle-menu {
@@ -914,10 +911,10 @@ body {
       padding-top: 15px;
       padding-left: 0;
       padding-right: 0;
-      background-image: url("../img/pattern_bg2.png");
-      background-color: #f2f2f2;
+      background-image: url("../img/Triangle.svg");
+      background-color: #fff;
       background-size: 100% auto;
-      background-position: 50% -1px;
+      background-position: 50% 0;
     }
     &__advantage-block-wrap {
       display: flex;
