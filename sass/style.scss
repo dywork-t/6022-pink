@@ -226,14 +226,14 @@ body {
   &__img {
     margin-bottom: 1px;
   }
+  &__img-row {
+    margin-left: -35px;
+  }
   &__img-item {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 35px;
-    margin-top: 5px;
-  }
-  &__img-item:nth-child(3n) {
-    margin-right: 0;
+    margin-left: 35px;
+    margin-bottom: 5px;
   }
 }
 .download-block-1 {
@@ -959,18 +959,20 @@ body {
     &__advantage-block-wrap {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       float: none;
+      width: 100%;
       padding: 45px 0 0;
       text-align: center;
     }
     &__advantage-title {
       margin-top: 55px;
-      margin-bottom: 35px;
+      margin-bottom: 20px;
       font-size: 30px;
     }
     &__advantage-text {
       width: 250px;
-      margin: 0 auto;
+      margin: 15px auto 0;
       font-size: 18px;
     }
     &__advantage-content {
