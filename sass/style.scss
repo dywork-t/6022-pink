@@ -456,26 +456,6 @@ body {
 .research-block {
   display: none;
 }
-.map__img {
-  position: relative;
-  top: 55px;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  z-index: 1000;
-
-}
-
-/* Карта */
-.map {
-  &__img--tablet {
-    display: none;
-  }
-  &__img--desktop {
-    display: none;
-  }
-}
-
 /* Футер */
 .page-footer {
   display: none;
@@ -775,14 +755,6 @@ body {
       margin-bottom: 0;
     }
   }
-  .map {
-    &__img--mobile {
-      display: none;
-    }
-    &__img--tablet {
-      display: block;
-    }
-  }
   .page-footer {
     display: flex;
     align-items: center;
@@ -1001,7 +973,9 @@ body {
     }
   }
   .slider-reviews {
-    background: url("../img/quotes.svg") no-repeat center 67px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center 67px;
     &__slide {
       position: relative;
       padding-top: 120px;
@@ -1081,17 +1055,6 @@ body {
     }
     &__item-text {
       font-size: 24px;
-    }
-  }
-  .map {
-    &__img--mobile {
-      display: none;
-    }
-    &__img--tablet {
-      display: none;
-    }
-    &__img--desktop {
-      display: block;
     }
   }
   .page-footer {
