@@ -14,19 +14,6 @@ $text-color: #283645;
 $text-color--white: #d3d4d5;
 $text-color--red: #d54166;
 
-@function rem($pxs) {
-  @if type_of($pxs) == list {
-    $rem: ();
-    @each $px in $pxs {
-      $rem: append($rem, $px / 16 * 1rem);
-    }
-  } @else {
-    $rem: $pxs / 16 * 1rem;
-  }
-
-  @return $rem;
-}
-
 /* Стили типографики */
 h1 {
   font-size: $font-size-h1;
@@ -455,6 +442,17 @@ body {
 }
 .research-block {
   display: none;
+}
+#map::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 155px;
+  top: 0;
+  background: url("../img/triangle-map.svg") no-repeat;
+  z-index: 10;
+
 }
 /* Футер */
 .page-footer {

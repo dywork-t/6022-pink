@@ -491,6 +491,17 @@ body {
   display: none;
 }
 
+#map::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 155px;
+  top: 0;
+  background: url("../img/triangle-map.svg") no-repeat;
+  z-index: 10;
+}
+
 /* Футер */
 .page-footer {
   display: none;
