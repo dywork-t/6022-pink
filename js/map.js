@@ -9,7 +9,7 @@ ymaps.ready(function () {
   placemark1 = new ymaps.Placemark(
     [59.93632276, 30.32115050], {}, {
       iconLayout: 'default#image',
-      iconImageHref: 'C:/dywork/6022-pink/img/icon-map.svg',
+      iconImageHref: './img/icon-map.svg',
       iconImageSize: [36, 36],
       iconImageOffset: [-10, 0]
     })
