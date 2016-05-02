@@ -1,81 +1,87 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-githooks');
-  grunt.loadNpmTasks('grunt-lintspaces');
+  require("load-grunt-tasks")(grunt);
+
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "autoprefixer",
+    "cmq",
+    "cssmin",
+    "imagemin"
+  ]);
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-
     less: {
       style: {
         files: {
-          'css/style.css': 'less/style.less'
+          "source/style/styledel.css": "source/sass/styledel.less"
         }
       }
     },
-
-    sass: {
+    autoprefixer: {
+      options: {
+        browsers: ["last 2 version", "ie 10"]
+      },
+      style: {
+        src: "source/style/style.css"
+      }
+    },
+    cmq: {
       style: {
         files: {
-          'css/style.css': 'sass/style.scss'
+          "source/style/style.css": ["source/style/style.css"]
         }
       }
     },
-
-    lintspaces: {
-      test: {
-        src: [
-          '*.html',
-          'js/*.js',
-          'less/*.less',
-          'sass/*.sass'
-        ],
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["source/sass/**/*.scss", "source/style/style.css"]
+      }
+    },
+    cssmin: {
+      style: {
         options: {
-          editorconfig: '.editorconfig'
+          keepSpecialComments: 0,
+          report: "gzip"
+        },
+        files: {
+          "source/style/style-min.css": ["source/style/style.css"]
         }
       }
     },
-
-    githooks: {
-      test: {
-        'pre-commit': 'lintspaces:test',
-      }
-    },
-
-    copy: {
-      gosha: {
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+        },
         files: [{
           expand: true,
-          src: [
-            '*.html',
-            'css/**',
-            'img/**',
-            'js/**'
-          ],
-          dest: 'gosha',
+          src: ["source/img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
-
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "img/**",
+            "style/style-min.css",
+            "style/normalize.css",
+            "js/**",
+            "index.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
     clean: {
-      gosha: [
-        'gosha/img/README',
-        'gosha/js/README'
-      ]
+      build: ["build"]
     }
   });
 
-  grunt.registerTask('test', ['lintspaces:test']);
-
-  if (grunt.file.exists(__dirname, 'less', 'style.less')) {
-    grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
-  } else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {
-    grunt.registerTask('gosha', ['sass:style', 'copy:gosha', 'clean:gosha']);
-  } else {
-    grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
-  }
 };
